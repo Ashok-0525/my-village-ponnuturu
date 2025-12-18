@@ -21,6 +21,9 @@ jobs:
           source: "./"
           target: "/var/www/app"
 
+      - name: public ip
+        run: curl https://ifconfig.me
+
       - name: restart nginx
         uses: appleboy/ssh-action@v0.1.7
         with:
